@@ -16,5 +16,10 @@ namespace project_akhir
         {
             InitializeComponent();
         }
+
+        private void Piket_Harian_Dokter_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

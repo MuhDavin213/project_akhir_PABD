@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Piket_Harian_Dokter";
             this.Text = "Piket_Harian_Dokter";
+            this.Load += new System.EventHandler(this.Piket_Harian_Dokter_Load);
             this.ResumeLayout(false);
 
         }
