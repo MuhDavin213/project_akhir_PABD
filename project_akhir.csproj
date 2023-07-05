@@ -99,6 +99,9 @@
     <EmbeddedResource Include="Data_Dokter.resx">
       <DependentUpon>Data_Dokter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Piket_Harian_Dokter.resx">
+      <DependentUpon>Piket_Harian_Dokter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
