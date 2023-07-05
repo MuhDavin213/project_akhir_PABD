@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace project_akhir
 {
-    public partial class Form1 : Form
+    public partial class Data_Pasien : Form
     {
-        public Form1()
+        public Data_Pasien()
         {
             InitializeComponent();
         }
