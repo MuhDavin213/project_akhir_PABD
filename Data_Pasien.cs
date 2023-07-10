@@ -16,5 +16,10 @@ namespace project_akhir
         {
             InitializeComponent();
         }
+
+        private void Data_Pasien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

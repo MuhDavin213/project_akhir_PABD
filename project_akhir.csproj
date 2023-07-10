@@ -114,6 +114,9 @@
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Piket_Harian_Dokter.resx">
       <DependentUpon>Piket_Harian_Dokter.cs</DependentUpon>
     </EmbeddedResource>
