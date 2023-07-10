@@ -38,19 +38,19 @@
             this.JadwalPerawatPasien = new System.Windows.Forms.Button();
             this.JadwalPengurusKamar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("News706 BT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(249, 31);
+            this.label1.Location = new System.Drawing.Point(231, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 36);
+            this.label1.Size = new System.Drawing.Size(191, 34);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Rumah Sakit K25";
+            this.label1.Text = "Rumah Sakit";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // DataPerawat
@@ -134,12 +134,25 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Kelompok B4";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.Font = new System.Drawing.Font("News706 BT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gold;
+            this.label3.Location = new System.Drawing.Point(428, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 36);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "K25";
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.JadwalPengurusKamar);
             this.Controls.Add(this.JadwalPerawatPasien);
@@ -169,5 +182,6 @@
         private System.Windows.Forms.Button JadwalPerawatPasien;
         private System.Windows.Forms.Button JadwalPengurusKamar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

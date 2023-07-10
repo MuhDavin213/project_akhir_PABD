@@ -94,6 +94,12 @@
     <Compile Include="Kamar.Designer.cs">
       <DependentUpon>Kamar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Piket_Harian_Dokter.cs">
       <SubType>Form</SubType>
     </Compile>

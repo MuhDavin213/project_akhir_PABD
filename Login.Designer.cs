@@ -1,6 +1,6 @@
 ﻿namespace project_akhir
 {
-    partial class Piket_Harian_Dokter
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Piket_Harian_Dokter
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Piket_Harian_Dokter";
-            this.Text = "Piket_Harian_Dokter";
-            this.Load += new System.EventHandler(this.Piket_Harian_Dokter_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "Login";
         }
 
         #endregion
