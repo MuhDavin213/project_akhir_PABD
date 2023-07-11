@@ -19,6 +19,14 @@ namespace project_akhir
 
         private void Piket_Harian_Dokter_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'puskesmas_superDataSet3.Jadwal_Perawat_Pasien' table. You can move, or remove it, as needed.
+            this.jadwal_Perawat_PasienTableAdapter.Fill(this.puskesmas_superDataSet3.Jadwal_Perawat_Pasien);
+            // TODO: This line of code loads data into the 'puskesmas_superDataSet2.Perawat' table. You can move, or remove it, as needed.
+            this.perawatTableAdapter.Fill(this.puskesmas_superDataSet2.Perawat);
+            // TODO: This line of code loads data into the 'puskesmas_superDataSet1.Jadwal_Pengurus_Kamar' table. You can move, or remove it, as needed.
+            this.jadwal_Pengurus_KamarTableAdapter.Fill(this.puskesmas_superDataSet1.Jadwal_Pengurus_Kamar);
+            // TODO: This line of code loads data into the 'puskesmas_superDataSet.Kamar' table. You can move, or remove it, as needed.
+            this.kamarTableAdapter.Fill(this.puskesmas_superDataSet.Kamar);
 
         }
     }

@@ -64,6 +64,26 @@
     <Compile Include="Data_Dokter.Designer.cs">
       <DependentUpon>Data_Dokter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Puskesmas_superDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Puskesmas_superDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Puskesmas_superDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Puskesmas_superDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Puskesmas_superDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Puskesmas_superDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Puskesmas_superDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Puskesmas_superDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Rawat_Inap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +128,50 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Puskesmas_superDataSet11.xsc">
+      <DependentUpon>Puskesmas_superDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Puskesmas_superDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Puskesmas_superDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Puskesmas_superDataSet11.xss">
+      <DependentUpon>Puskesmas_superDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Puskesmas_superDataSet21.xsc">
+      <DependentUpon>Puskesmas_superDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Puskesmas_superDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Puskesmas_superDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Puskesmas_superDataSet21.xss">
+      <DependentUpon>Puskesmas_superDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Puskesmas_superDataSet31.xsc">
+      <DependentUpon>Puskesmas_superDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="Puskesmas_superDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Puskesmas_superDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Puskesmas_superDataSet31.xss">
+      <DependentUpon>Puskesmas_superDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="Puskesmas_superDataSet4.xsc">
+      <DependentUpon>Puskesmas_superDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Puskesmas_superDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Puskesmas_superDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Puskesmas_superDataSet4.xss">
+      <DependentUpon>Puskesmas_superDataSet4.xsd</DependentUpon>
+    </None>
     <None Include="Resources\pasien.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
