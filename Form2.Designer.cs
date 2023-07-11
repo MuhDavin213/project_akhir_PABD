@@ -33,7 +33,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,15 +90,6 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "Open";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(24, 598);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 38);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Kembali";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -168,10 +159,20 @@
             this.textBox4.Size = new System.Drawing.Size(294, 26);
             this.textBox4.TabIndex = 13;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(24, 598);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(94, 38);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Kembali";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // DataPerawat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::project_akhir.Properties.Resources.perawat;
             this.ClientSize = new System.Drawing.Size(1250, 648);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
