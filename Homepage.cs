@@ -64,6 +64,11 @@ namespace project_akhir
 
         private void BtnDataPasien_Click(object sender, EventArgs e)
         {
+            PnlDataPasien.Height = BtnDataPasien.Height;
+            PnlDataPasien.Top = BtnDataPasien.Top;
+            pnlDataDokter.Visible = false;
+            PnlDataPasien.Visible = true;
+            PnlRawatInap.Visible = false;
 
         }
     }
