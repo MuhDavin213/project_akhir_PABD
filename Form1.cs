@@ -17,7 +17,6 @@ namespace project_akhir
         private string stringConnection = "data source = LAPTOP-DLDQQ5G0;" +
             "database=Puskesmas;User ID=sa;Password=mzM160503";
         private SqlConnection koneksi;
-        private SqlCommand cmd;
         public JadwalPraktek()
         {
             InitializeComponent();
