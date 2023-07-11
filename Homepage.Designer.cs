@@ -52,6 +52,9 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -61,9 +64,10 @@
             this.BtnDataPasien = new System.Windows.Forms.Button();
             this.PnlbuttonDataDokter = new System.Windows.Forms.Button();
             this.BtnRawatInap = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.PnlLeftSide.SuspendLayout();
             this.pnlDataDokter.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -73,8 +77,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.PnlRawatInap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -104,6 +109,7 @@
             // PnlLeftSide
             // 
             this.PnlLeftSide.BackColor = System.Drawing.Color.SkyBlue;
+            this.PnlLeftSide.Controls.Add(this.panel14);
             this.PnlLeftSide.Controls.Add(this.panel8);
             this.PnlLeftSide.Controls.Add(this.button3);
             this.PnlLeftSide.Controls.Add(this.button1);
@@ -162,6 +168,8 @@
             // 
             // pnlDataDokter
             // 
+            this.pnlDataDokter.Controls.Add(this.button8);
+            this.pnlDataDokter.Controls.Add(this.panel10);
             this.pnlDataDokter.Controls.Add(this.button7);
             this.pnlDataDokter.Controls.Add(this.panel12);
             this.pnlDataDokter.Controls.Add(this.button4);
@@ -301,7 +309,6 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel9.Controls.Add(this.panel10);
             this.panel9.Location = new System.Drawing.Point(-1, 300);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel9.Name = "panel9";
@@ -312,11 +319,48 @@
             // 
             this.panel10.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel10.Controls.Add(this.panel11);
-            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Location = new System.Drawing.Point(0, 473);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(11, 46);
             this.panel10.TabIndex = 24;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel11.Location = new System.Drawing.Point(0, 86);
+            this.panel11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(11, 46);
+            this.panel11.TabIndex = 25;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel12.Controls.Add(this.panel13);
+            this.panel12.Location = new System.Drawing.Point(0, 385);
+            this.panel12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(11, 46);
+            this.panel12.TabIndex = 25;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.SkyBlue;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.Control;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Location = new System.Drawing.Point(26, 371);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(240, 82);
+            this.button7.TabIndex = 25;
+            this.button7.Text = "   Jadwal Piket Dokter";
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button4
             // 
@@ -457,41 +501,50 @@
             this.BtnRawatInap.UseVisualStyleBackColor = true;
             this.BtnRawatInap.Click += new System.EventHandler(this.button3_Click);
             // 
-            // panel11
+            // panel13
             // 
-            this.panel11.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel11.Location = new System.Drawing.Point(0, 86);
-            this.panel11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(11, 46);
-            this.panel11.TabIndex = 25;
+            this.panel13.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel13.Location = new System.Drawing.Point(0, 76);
+            this.panel13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(11, 46);
+            this.panel13.TabIndex = 26;
             // 
-            // panel12
+            // panel14
             // 
-            this.panel12.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel12.Location = new System.Drawing.Point(0, 385);
-            this.panel12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(11, 46);
-            this.panel12.TabIndex = 25;
+            this.panel14.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel14.Controls.Add(this.panel15);
+            this.panel14.Location = new System.Drawing.Point(247, 471);
+            this.panel14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(11, 46);
+            this.panel14.TabIndex = 26;
             // 
-            // button7
+            // panel15
             // 
-            this.button7.BackColor = System.Drawing.Color.SkyBlue;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.Control;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(26, 371);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(240, 82);
-            this.button7.TabIndex = 25;
-            this.button7.Text = "   Jadwal Piket Dokter";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.panel15.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel15.Location = new System.Drawing.Point(0, 86);
+            this.panel15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(11, 46);
+            this.panel15.TabIndex = 25;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.SkyBlue;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.Control;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.Location = new System.Drawing.Point(26, 461);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(240, 82);
+            this.button8.TabIndex = 26;
+            this.button8.Text = "   Jadwal Perawat Pasien";
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // Homepage
             // 
@@ -520,8 +573,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.PnlRawatInap.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -562,6 +616,10 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Button button8;
     }
 }
 
