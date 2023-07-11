@@ -106,7 +106,7 @@ namespace project_akhir
         {
             string Idpas = textBox1.Text;
 
-            if (Iddokter == "")
+            if (Idpas == "")
             {
                 MessageBox.Show("Masukkan ID pasien yang ingin dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -230,7 +230,7 @@ namespace project_akhir
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Homepage hp = new Homepage;
+            Homepage hp = new Homepage();
             hp.Show();
             this.Hide();
 
