@@ -41,5 +41,25 @@ namespace project_akhir
         {
 
         }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            pnlDataDokter.Height = PnlbuttonDataDokter.Height;
+            pnlDataDokter.Top = PnlbuttonDataDokter.Top;
+            pnlDataDokter.Visible = true;
+            PnlDataPasien.Visible = false;
+            PnlRawatInap.Visible = false;
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void BtnDataPasien_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

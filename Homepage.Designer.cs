@@ -33,11 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PnlLeftSide = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnDataPasien = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PnlbuttonDataDokter = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnRawatInap = new System.Windows.Forms.Button();
             this.pnlDataDokter = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,25 +48,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
             this.PnlDataPasien = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id_Pasien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nama_Pasien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PnlRawatInap = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.PnlLeftSide.SuspendLayout();
             this.pnlDataDokter.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.PnlDataPasien.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.PnlRawatInap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -97,11 +93,11 @@
             // 
             this.PnlLeftSide.BackColor = System.Drawing.Color.SkyBlue;
             this.PnlLeftSide.Controls.Add(this.panel4);
-            this.PnlLeftSide.Controls.Add(this.button4);
+            this.PnlLeftSide.Controls.Add(this.BtnDataPasien);
             this.PnlLeftSide.Controls.Add(this.panel2);
-            this.PnlLeftSide.Controls.Add(this.button1);
+            this.PnlLeftSide.Controls.Add(this.PnlbuttonDataDokter);
             this.PnlLeftSide.Controls.Add(this.panel3);
-            this.PnlLeftSide.Controls.Add(this.button3);
+            this.PnlLeftSide.Controls.Add(this.BtnRawatInap);
             this.PnlLeftSide.Controls.Add(this.label3);
             this.PnlLeftSide.Controls.Add(this.label1);
             this.PnlLeftSide.Dock = System.Windows.Forms.DockStyle.Left;
@@ -118,20 +114,21 @@
             this.panel4.Size = new System.Drawing.Size(10, 37);
             this.panel4.TabIndex = 22;
             // 
-            // button4
+            // BtnDataPasien
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(3, 308);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(213, 66);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "   Data Pasien";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnDataPasien.FlatAppearance.BorderSize = 0;
+            this.BtnDataPasien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDataPasien.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDataPasien.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnDataPasien.Image = ((System.Drawing.Image)(resources.GetObject("BtnDataPasien.Image")));
+            this.BtnDataPasien.Location = new System.Drawing.Point(3, 308);
+            this.BtnDataPasien.Name = "BtnDataPasien";
+            this.BtnDataPasien.Size = new System.Drawing.Size(213, 66);
+            this.BtnDataPasien.TabIndex = 21;
+            this.BtnDataPasien.Text = "   Data Pasien";
+            this.BtnDataPasien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnDataPasien.UseVisualStyleBackColor = true;
+            this.BtnDataPasien.Click += new System.EventHandler(this.BtnDataPasien_Click);
             // 
             // panel2
             // 
@@ -141,20 +138,21 @@
             this.panel2.Size = new System.Drawing.Size(10, 37);
             this.panel2.TabIndex = 19;
             // 
-            // button1
+            // PnlbuttonDataDokter
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(3, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 66);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "   Data Dokter";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.PnlbuttonDataDokter.FlatAppearance.BorderSize = 0;
+            this.PnlbuttonDataDokter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PnlbuttonDataDokter.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PnlbuttonDataDokter.ForeColor = System.Drawing.SystemColors.Control;
+            this.PnlbuttonDataDokter.Image = ((System.Drawing.Image)(resources.GetObject("PnlbuttonDataDokter.Image")));
+            this.PnlbuttonDataDokter.Location = new System.Drawing.Point(3, 141);
+            this.PnlbuttonDataDokter.Name = "PnlbuttonDataDokter";
+            this.PnlbuttonDataDokter.Size = new System.Drawing.Size(213, 66);
+            this.PnlbuttonDataDokter.TabIndex = 15;
+            this.PnlbuttonDataDokter.Text = "   Data Dokter";
+            this.PnlbuttonDataDokter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.PnlbuttonDataDokter.UseVisualStyleBackColor = true;
+            this.PnlbuttonDataDokter.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // panel3
             // 
@@ -164,20 +162,21 @@
             this.panel3.Size = new System.Drawing.Size(10, 37);
             this.panel3.TabIndex = 20;
             // 
-            // button3
+            // BtnRawatInap
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(3, 225);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(213, 66);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "   Rawat Inap";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnRawatInap.FlatAppearance.BorderSize = 0;
+            this.BtnRawatInap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRawatInap.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRawatInap.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnRawatInap.Image = ((System.Drawing.Image)(resources.GetObject("BtnRawatInap.Image")));
+            this.BtnRawatInap.Location = new System.Drawing.Point(3, 225);
+            this.BtnRawatInap.Name = "BtnRawatInap";
+            this.BtnRawatInap.Size = new System.Drawing.Size(213, 66);
+            this.BtnRawatInap.TabIndex = 14;
+            this.BtnRawatInap.Text = "   Rawat Inap";
+            this.BtnRawatInap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnRawatInap.UseVisualStyleBackColor = true;
+            this.BtnRawatInap.Click += new System.EventHandler(this.button3_Click);
             // 
             // pnlDataDokter
             // 
@@ -276,102 +275,58 @@
             this.button2.TabIndex = 0;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.label11);
-            this.panel14.Controls.Add(this.button12);
-            this.panel14.Location = new System.Drawing.Point(36, 41);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(150, 125);
-            this.panel14.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(29, 93);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(96, 16);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Spesialis Mata";
-            // 
-            // button12
-            // 
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(24, 3);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(93, 78);
-            this.button12.TabIndex = 0;
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.label10);
-            this.panel13.Controls.Add(this.button11);
-            this.panel13.Location = new System.Drawing.Point(218, 41);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(150, 125);
-            this.panel13.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(29, 93);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 16);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Spesialis Mata";
-            // 
-            // button11
-            // 
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(24, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(93, 78);
-            this.button11.TabIndex = 0;
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.label9);
-            this.panel12.Controls.Add(this.button10);
-            this.panel12.Location = new System.Drawing.Point(399, 41);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(150, 125);
-            this.panel12.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(29, 93);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(96, 16);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Spesialis Mata";
-            // 
-            // button10
-            // 
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(24, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(93, 78);
-            this.button10.TabIndex = 0;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
             // PnlDataPasien
             // 
-            this.PnlDataPasien.Controls.Add(this.panel12);
-            this.PnlDataPasien.Controls.Add(this.panel13);
-            this.PnlDataPasien.Controls.Add(this.panel14);
+            this.PnlDataPasien.Controls.Add(this.dataGridView1);
             this.PnlDataPasien.Location = new System.Drawing.Point(218, 0);
             this.PnlDataPasien.Name = "PnlDataPasien";
             this.PnlDataPasien.Size = new System.Drawing.Size(581, 450);
             this.PnlDataPasien.TabIndex = 20;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_Pasien,
+            this.Nama_Pasien});
+            this.dataGridView1.Location = new System.Drawing.Point(78, 88);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(446, 75);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Id_Pasien
+            // 
+            this.Id_Pasien.HeaderText = "Id_Pasien";
+            this.Id_Pasien.MinimumWidth = 6;
+            this.Id_Pasien.Name = "Id_Pasien";
+            this.Id_Pasien.Width = 125;
+            // 
+            // Nama_Pasien
+            // 
+            this.Nama_Pasien.HeaderText = "Nama_Pasien";
+            this.Nama_Pasien.MinimumWidth = 6;
+            this.Nama_Pasien.Name = "Nama_Pasien";
+            this.Nama_Pasien.Width = 125;
+            // 
+            // PnlRawatInap
+            // 
+            this.PnlRawatInap.Controls.Add(this.dataGridView2);
+            this.PnlRawatInap.Location = new System.Drawing.Point(218, 0);
+            this.PnlRawatInap.Name = "PnlRawatInap";
+            this.PnlRawatInap.Size = new System.Drawing.Size(581, 450);
+            this.PnlRawatInap.TabIndex = 21;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(77, 54);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(83, 328);
+            this.dataGridView2.TabIndex = 0;
             // 
             // Homepage
             // 
@@ -379,9 +334,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pnlDataDokter);
+            this.Controls.Add(this.PnlRawatInap);
             this.Controls.Add(this.PnlDataPasien);
             this.Controls.Add(this.PnlLeftSide);
-            this.Controls.Add(this.pnlDataDokter);
             this.Name = "Homepage";
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.Form_1_Load);
@@ -394,13 +350,10 @@
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.PnlDataPasien.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.PnlRawatInap.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -409,8 +362,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PnlLeftSide;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnRawatInap;
+        private System.Windows.Forms.Button PnlbuttonDataDokter;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlDataDokter;
@@ -418,23 +371,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnDataPasien;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Panel PnlDataPasien;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Pasien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nama_Pasien;
+        private System.Windows.Forms.Panel PnlRawatInap;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 
