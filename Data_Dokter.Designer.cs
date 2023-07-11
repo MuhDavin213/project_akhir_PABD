@@ -81,6 +81,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DataDokter";
             this.Text = "Data Dokter";
+            this.Load += new System.EventHandler(this.DataDokter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

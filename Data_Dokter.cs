@@ -21,5 +21,10 @@ namespace project_akhir
         {
 
         }
+
+        private void DataDokter_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
