@@ -73,5 +73,15 @@ namespace project_akhir
         {
             new DataKamar().Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            new PiketDokter().Show(); 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            new DataKamar().Show();
+        }
     }
 }
