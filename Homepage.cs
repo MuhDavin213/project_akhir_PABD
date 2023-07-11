@@ -17,7 +17,17 @@ namespace project_akhir
             InitializeComponent();
         }
 
+        private void Form_1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

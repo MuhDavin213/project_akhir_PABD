@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace project_akhir
 {
-    public partial class Form_1 : Form
+    public partial class DataDokter : Form
     {
-        public Form_1()
+        public DataDokter()
         {
             InitializeComponent();
         }
 
-        private void Form_1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
         {
 
         }

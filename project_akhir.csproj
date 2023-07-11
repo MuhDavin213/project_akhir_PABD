@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data_Dokter.cs">
+    <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data_Dokter.Designer.cs">
-      <DependentUpon>Data_Dokter.cs</DependentUpon>
+    <Compile Include="Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
     <Compile Include="Data_Pasien.cs">
       <SubType>Form</SubType>
@@ -58,47 +58,11 @@
     <Compile Include="Data_Pasien.Designer.cs">
       <DependentUpon>Data_Pasien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data_Perawat.cs">
+    <Compile Include="Data_Dokter1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data_Perawat.Designer.cs">
-      <DependentUpon>Data_Perawat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Homepage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Homepage.Designer.cs">
-      <DependentUpon>Homepage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Jadwal_Pengurus_Kamar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Jadwal_Pengurus_Kamar.Designer.cs">
-      <DependentUpon>Jadwal_Pengurus_Kamar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Jadwal_Perawat_Pasien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Jadwal_Perawat_Pasien.Designer.cs">
-      <DependentUpon>Jadwal_Perawat_Pasien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Jadwal_Praktek.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Jadwal_Praktek.Designer.cs">
-      <DependentUpon>Jadwal_Praktek.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Kamar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Kamar.Designer.cs">
-      <DependentUpon>Kamar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Data_Dokter1.Designer.cs">
+      <DependentUpon>Data_Dokter1.cs</DependentUpon>
     </Compile>
     <Compile Include="Piket_Harian_Dokter.cs">
       <SubType>Form</SubType>
@@ -108,14 +72,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Data_Dokter.resx">
-      <DependentUpon>Data_Dokter.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Data_Pasien.resx">
+      <DependentUpon>Data_Pasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_Dokter1.resx">
+      <DependentUpon>Data_Dokter1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Piket_Harian_Dokter.resx">
       <DependentUpon>Piket_Harian_Dokter.cs</DependentUpon>
