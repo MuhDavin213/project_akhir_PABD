@@ -248,6 +248,13 @@ namespace project_akhir
         {
             refreshform();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Homepage HP = new Homepage();
+            HP.Show();
+            this.Hide();
+        }
     }
 }
 

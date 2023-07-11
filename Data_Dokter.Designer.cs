@@ -244,6 +244,7 @@
             this.button5.TabIndex = 17;
             this.button5.Text = "Kembali";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // comboBox1
             // 
