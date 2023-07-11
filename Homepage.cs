@@ -83,5 +83,10 @@ namespace project_akhir
         {
             new DataKamar().Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new PerawatPasien().Show();
+        }
     }
 }
