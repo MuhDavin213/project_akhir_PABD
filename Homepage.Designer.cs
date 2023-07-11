@@ -56,6 +56,8 @@
             this.BtnDataPasien = new System.Windows.Forms.Button();
             this.PnlbuttonDataDokter = new System.Windows.Forms.Button();
             this.BtnRawatInap = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.PnlLeftSide.SuspendLayout();
             this.pnlDataDokter.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -94,6 +96,8 @@
             // PnlLeftSide
             // 
             this.PnlLeftSide.BackColor = System.Drawing.Color.SkyBlue;
+            this.PnlLeftSide.Controls.Add(this.panel8);
+            this.PnlLeftSide.Controls.Add(this.button3);
             this.PnlLeftSide.Controls.Add(this.button1);
             this.PnlLeftSide.Controls.Add(this.panel7);
             this.PnlLeftSide.Controls.Add(this.panel4);
@@ -377,6 +381,31 @@
             this.BtnRawatInap.UseVisualStyleBackColor = true;
             this.BtnRawatInap.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(7, 467);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(240, 82);
+            this.button3.TabIndex = 24;
+            this.button3.Text = "   Data Kamar";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel8.Location = new System.Drawing.Point(0, 487);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(11, 46);
+            this.panel8.TabIndex = 23;
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -436,6 +465,8 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button button3;
     }
 }
 
