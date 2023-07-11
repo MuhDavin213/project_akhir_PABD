@@ -19,6 +19,8 @@ namespace project_akhir
 
         private void DataPerawat_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'puskesmasDataSet4.perawat' table. You can move, or remove it, as needed.
+            this.perawatTableAdapter.Fill(this.puskesmasDataSet4.perawat);
 
         }
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -42,12 +43,28 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.puskesmasDataSet4 = new project_akhir.PuskesmasDataSet4();
+            this.perawatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.perawatTableAdapter = new project_akhir.PuskesmasDataSet4TableAdapters.perawatTableAdapter();
+            this.idperawatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaperawatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alamatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notlpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perawatBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idperawatDataGridViewTextBoxColumn,
+            this.namaperawatDataGridViewTextBoxColumn,
+            this.alamatDataGridViewTextBoxColumn,
+            this.notlpDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.perawatBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(561, 52);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
@@ -133,6 +150,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.perawatBindingSource, "id_perawat", true));
             this.textBox1.Location = new System.Drawing.Point(171, 157);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(294, 26);
@@ -140,6 +158,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.perawatBindingSource, "nama_perawat", true));
             this.textBox2.Location = new System.Drawing.Point(171, 205);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(294, 26);
@@ -147,6 +166,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.perawatBindingSource, "alamat", true));
             this.textBox3.Location = new System.Drawing.Point(171, 264);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(294, 26);
@@ -154,6 +174,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.perawatBindingSource, "no_tlp", true));
             this.textBox4.Location = new System.Drawing.Point(171, 311);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(294, 26);
@@ -167,6 +188,52 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "Kembali";
             this.button5.UseVisualStyleBackColor = true;
+            // 
+            // puskesmasDataSet4
+            // 
+            this.puskesmasDataSet4.DataSetName = "PuskesmasDataSet4";
+            this.puskesmasDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // perawatBindingSource
+            // 
+            this.perawatBindingSource.DataMember = "perawat";
+            this.perawatBindingSource.DataSource = this.puskesmasDataSet4;
+            // 
+            // perawatTableAdapter
+            // 
+            this.perawatTableAdapter.ClearBeforeFill = true;
+            // 
+            // idperawatDataGridViewTextBoxColumn
+            // 
+            this.idperawatDataGridViewTextBoxColumn.DataPropertyName = "id_perawat";
+            this.idperawatDataGridViewTextBoxColumn.HeaderText = "id_perawat";
+            this.idperawatDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idperawatDataGridViewTextBoxColumn.Name = "idperawatDataGridViewTextBoxColumn";
+            this.idperawatDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // namaperawatDataGridViewTextBoxColumn
+            // 
+            this.namaperawatDataGridViewTextBoxColumn.DataPropertyName = "nama_perawat";
+            this.namaperawatDataGridViewTextBoxColumn.HeaderText = "nama_perawat";
+            this.namaperawatDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.namaperawatDataGridViewTextBoxColumn.Name = "namaperawatDataGridViewTextBoxColumn";
+            this.namaperawatDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // alamatDataGridViewTextBoxColumn
+            // 
+            this.alamatDataGridViewTextBoxColumn.DataPropertyName = "alamat";
+            this.alamatDataGridViewTextBoxColumn.HeaderText = "alamat";
+            this.alamatDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
+            this.alamatDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // notlpDataGridViewTextBoxColumn
+            // 
+            this.notlpDataGridViewTextBoxColumn.DataPropertyName = "no_tlp";
+            this.notlpDataGridViewTextBoxColumn.HeaderText = "no_tlp";
+            this.notlpDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.notlpDataGridViewTextBoxColumn.Name = "notlpDataGridViewTextBoxColumn";
+            this.notlpDataGridViewTextBoxColumn.Width = 150;
             // 
             // DataPerawat
             // 
@@ -192,6 +259,8 @@
             this.Text = "Data Perawat";
             this.Load += new System.EventHandler(this.DataPerawat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perawatBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +282,12 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
+        private PuskesmasDataSet4 puskesmasDataSet4;
+        private System.Windows.Forms.BindingSource perawatBindingSource;
+        private PuskesmasDataSet4TableAdapters.perawatTableAdapter perawatTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idperawatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaperawatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alamatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notlpDataGridViewTextBoxColumn;
     }
 }
