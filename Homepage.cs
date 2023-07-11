@@ -54,7 +54,12 @@ namespace project_akhir
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            PnlRawatInap.Height = BtnRawatInap.Height;
+            PnlRawatInap.Top = BtnRawatInap.Top;
+            pnlDataDokter.Visible = false;
+            PnlDataPasien.Visible = false;
+            PnlRawatInap.Visible = true;
+
         }
 
         private void BtnDataPasien_Click(object sender, EventArgs e)
