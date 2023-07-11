@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace project_akhir
 {
-    public partial class Piket_Harian_Dokter : Form
+    public partial class Rawat_Inap : Form
     {
-        public Piket_Harian_Dokter()
+        public Rawat_Inap()
         {
             InitializeComponent();
         }
