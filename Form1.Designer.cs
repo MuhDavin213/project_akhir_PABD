@@ -30,6 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idjadwalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hariDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jammulaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jamselesaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iddokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jadwalpraktekBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.puskesmasDataSet = new project_akhir.PuskesmasDataSet();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -45,17 +52,11 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.puskesmasDataSet = new project_akhir.PuskesmasDataSet();
-            this.jadwalpraktekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jadwal_praktekTableAdapter = new project_akhir.PuskesmasDataSetTableAdapters.jadwal_praktekTableAdapter();
-            this.idjadwalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hariDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jammulaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jamselesaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iddokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jadwalpraktekBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -76,14 +77,65 @@
             this.dataGridView1.Size = new System.Drawing.Size(639, 318);
             this.dataGridView1.TabIndex = 0;
             // 
+            // idjadwalDataGridViewTextBoxColumn
+            // 
+            this.idjadwalDataGridViewTextBoxColumn.DataPropertyName = "id_jadwal";
+            this.idjadwalDataGridViewTextBoxColumn.HeaderText = "id_jadwal";
+            this.idjadwalDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idjadwalDataGridViewTextBoxColumn.Name = "idjadwalDataGridViewTextBoxColumn";
+            this.idjadwalDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // hariDataGridViewTextBoxColumn
+            // 
+            this.hariDataGridViewTextBoxColumn.DataPropertyName = "hari";
+            this.hariDataGridViewTextBoxColumn.HeaderText = "hari";
+            this.hariDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.hariDataGridViewTextBoxColumn.Name = "hariDataGridViewTextBoxColumn";
+            this.hariDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // jammulaiDataGridViewTextBoxColumn
+            // 
+            this.jammulaiDataGridViewTextBoxColumn.DataPropertyName = "jam_mulai";
+            this.jammulaiDataGridViewTextBoxColumn.HeaderText = "jam_mulai";
+            this.jammulaiDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.jammulaiDataGridViewTextBoxColumn.Name = "jammulaiDataGridViewTextBoxColumn";
+            this.jammulaiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // jamselesaiDataGridViewTextBoxColumn
+            // 
+            this.jamselesaiDataGridViewTextBoxColumn.DataPropertyName = "jam_selesai";
+            this.jamselesaiDataGridViewTextBoxColumn.HeaderText = "jam_selesai";
+            this.jamselesaiDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.jamselesaiDataGridViewTextBoxColumn.Name = "jamselesaiDataGridViewTextBoxColumn";
+            this.jamselesaiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // iddokterDataGridViewTextBoxColumn
+            // 
+            this.iddokterDataGridViewTextBoxColumn.DataPropertyName = "id_dokter";
+            this.iddokterDataGridViewTextBoxColumn.HeaderText = "id_dokter";
+            this.iddokterDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.iddokterDataGridViewTextBoxColumn.Name = "iddokterDataGridViewTextBoxColumn";
+            this.iddokterDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // jadwalpraktekBindingSource
+            // 
+            this.jadwalpraktekBindingSource.DataMember = "jadwal_praktek";
+            this.jadwalpraktekBindingSource.DataSource = this.puskesmasDataSet;
+            // 
+            // puskesmasDataSet
+            // 
+            this.puskesmasDataSet.DataSetName = "PuskesmasDataSet";
+            this.puskesmasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(595, 469);
+            this.button1.Location = new System.Drawing.Point(590, 469);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 41);
             this.button1.TabIndex = 1;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -109,8 +161,9 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 41);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Open";
+            this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -178,6 +231,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(285, 26);
             this.textBox1.TabIndex = 11;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -207,59 +261,19 @@
             this.textBox5.Size = new System.Drawing.Size(285, 26);
             this.textBox5.TabIndex = 15;
             // 
-            // puskesmasDataSet
-            // 
-            this.puskesmasDataSet.DataSetName = "PuskesmasDataSet";
-            this.puskesmasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // jadwalpraktekBindingSource
-            // 
-            this.jadwalpraktekBindingSource.DataMember = "jadwal_praktek";
-            this.jadwalpraktekBindingSource.DataSource = this.puskesmasDataSet;
-            // 
             // jadwal_praktekTableAdapter
             // 
             this.jadwal_praktekTableAdapter.ClearBeforeFill = true;
             // 
-            // idjadwalDataGridViewTextBoxColumn
+            // button6
             // 
-            this.idjadwalDataGridViewTextBoxColumn.DataPropertyName = "id_jadwal";
-            this.idjadwalDataGridViewTextBoxColumn.HeaderText = "id_jadwal";
-            this.idjadwalDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idjadwalDataGridViewTextBoxColumn.Name = "idjadwalDataGridViewTextBoxColumn";
-            this.idjadwalDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // hariDataGridViewTextBoxColumn
-            // 
-            this.hariDataGridViewTextBoxColumn.DataPropertyName = "hari";
-            this.hariDataGridViewTextBoxColumn.HeaderText = "hari";
-            this.hariDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.hariDataGridViewTextBoxColumn.Name = "hariDataGridViewTextBoxColumn";
-            this.hariDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // jammulaiDataGridViewTextBoxColumn
-            // 
-            this.jammulaiDataGridViewTextBoxColumn.DataPropertyName = "jam_mulai";
-            this.jammulaiDataGridViewTextBoxColumn.HeaderText = "jam_mulai";
-            this.jammulaiDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.jammulaiDataGridViewTextBoxColumn.Name = "jammulaiDataGridViewTextBoxColumn";
-            this.jammulaiDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // jamselesaiDataGridViewTextBoxColumn
-            // 
-            this.jamselesaiDataGridViewTextBoxColumn.DataPropertyName = "jam_selesai";
-            this.jamselesaiDataGridViewTextBoxColumn.HeaderText = "jam_selesai";
-            this.jamselesaiDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.jamselesaiDataGridViewTextBoxColumn.Name = "jamselesaiDataGridViewTextBoxColumn";
-            this.jamselesaiDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // iddokterDataGridViewTextBoxColumn
-            // 
-            this.iddokterDataGridViewTextBoxColumn.DataPropertyName = "id_dokter";
-            this.iddokterDataGridViewTextBoxColumn.HeaderText = "id_dokter";
-            this.iddokterDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.iddokterDataGridViewTextBoxColumn.Name = "iddokterDataGridViewTextBoxColumn";
-            this.iddokterDataGridViewTextBoxColumn.Width = 150;
+            this.button6.Location = new System.Drawing.Point(590, 542);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(94, 41);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "Simpan";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // JadwalPraktek
             // 
@@ -268,6 +282,7 @@
             this.BackgroundImage = global::project_akhir.Properties.Resources.jadwal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1248, 653);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -288,8 +303,8 @@
             this.Text = "Jadwal Praktek";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jadwalpraktekBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +336,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jammulaiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jamselesaiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddokterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button6;
     }
 }
