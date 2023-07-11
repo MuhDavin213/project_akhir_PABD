@@ -157,6 +157,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.Silver;
             this.textBox1.Location = new System.Drawing.Point(217, 96);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(267, 26);
@@ -164,6 +165,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.Silver;
             this.textBox2.Location = new System.Drawing.Point(217, 151);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(267, 26);
@@ -171,6 +173,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.Color.Silver;
             this.textBox3.Location = new System.Drawing.Point(217, 195);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(267, 26);
@@ -178,6 +181,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.Color.Silver;
             this.textBox4.Location = new System.Drawing.Point(217, 256);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(267, 26);
@@ -185,6 +189,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.BackColor = System.Drawing.Color.Silver;
             this.textBox5.Location = new System.Drawing.Point(217, 306);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(267, 26);
@@ -192,6 +197,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.BackColor = System.Drawing.Color.Silver;
             this.textBox6.Location = new System.Drawing.Point(217, 360);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(267, 26);
@@ -210,7 +216,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackgroundImage = global::project_akhir.Properties.Resources.dokter;
             this.ClientSize = new System.Drawing.Size(1232, 648);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox6);

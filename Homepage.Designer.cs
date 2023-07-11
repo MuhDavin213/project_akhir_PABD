@@ -32,6 +32,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PnlLeftSide = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.BtnDataPasien = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -54,7 +55,7 @@
             this.Nama_Pasien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnlRawatInap = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.PnlLeftSide.SuspendLayout();
             this.pnlDataDokter.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -93,6 +94,7 @@
             // PnlLeftSide
             // 
             this.PnlLeftSide.BackColor = System.Drawing.Color.SkyBlue;
+            this.PnlLeftSide.Controls.Add(this.button1);
             this.PnlLeftSide.Controls.Add(this.panel7);
             this.PnlLeftSide.Controls.Add(this.panel4);
             this.PnlLeftSide.Controls.Add(this.BtnDataPasien);
@@ -108,6 +110,15 @@
             this.PnlLeftSide.Name = "PnlLeftSide";
             this.PnlLeftSide.Size = new System.Drawing.Size(246, 562);
             this.PnlLeftSide.TabIndex = 18;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel7.Location = new System.Drawing.Point(0, 110);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(11, 46);
+            this.panel7.TabIndex = 20;
             // 
             // panel4
             // 
@@ -349,14 +360,22 @@
             this.dataGridView2.Size = new System.Drawing.Size(93, 410);
             this.dataGridView2.TabIndex = 0;
             // 
-            // panel7
+            // button1
             // 
-            this.panel7.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel7.Location = new System.Drawing.Point(0, 110);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(11, 46);
-            this.panel7.TabIndex = 20;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(11, 95);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(240, 82);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Jadwal Praktek\r\n";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_3);
             // 
             // Homepage
             // 
@@ -416,6 +435,7 @@
         private System.Windows.Forms.Panel PnlRawatInap;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button1;
     }
 }
 
