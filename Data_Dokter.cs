@@ -122,6 +122,7 @@ namespace project_akhir
             textBox3.Enabled = true;
             textBox4.Enabled = true;
             textBox5.Enabled = true;
+            comboBox1.Enabled = true;
             button6.Enabled = true;
             button1.Enabled = true;
 

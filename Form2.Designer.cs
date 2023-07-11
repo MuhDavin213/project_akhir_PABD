@@ -50,6 +50,7 @@
             this.namaperawatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alamatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notlpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perawatBindingSource)).BeginInit();
@@ -80,6 +81,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -89,6 +91,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -98,6 +101,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -235,12 +239,23 @@
             this.notlpDataGridViewTextBoxColumn.Name = "notlpDataGridViewTextBoxColumn";
             this.notlpDataGridViewTextBoxColumn.Width = 150;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(435, 496);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(110, 38);
+            this.button6.TabIndex = 14;
+            this.button6.Text = "Save";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // DataPerawat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::project_akhir.Properties.Resources.perawat;
             this.ClientSize = new System.Drawing.Size(1250, 648);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -289,5 +304,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn namaperawatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alamatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notlpDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button6;
     }
 }
