@@ -61,39 +61,43 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(607, 492);
+            this.button1.BackColor = System.Drawing.Color.Aqua;
+            this.button1.Location = new System.Drawing.Point(599, 546);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 44);
             this.button1.TabIndex = 1;
             this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(771, 492);
+            this.button2.BackColor = System.Drawing.Color.Aqua;
+            this.button2.Location = new System.Drawing.Point(776, 546);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 44);
             this.button2.TabIndex = 2;
             this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(937, 492);
+            this.button3.BackColor = System.Drawing.Color.Aqua;
+            this.button3.Location = new System.Drawing.Point(937, 546);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(102, 44);
             this.button3.TabIndex = 3;
             this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1094, 492);
+            this.button4.BackColor = System.Drawing.Color.Aqua;
+            this.button4.Location = new System.Drawing.Point(1103, 546);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(102, 44);
             this.button4.TabIndex = 4;
             this.button4.Text = "Open";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -205,12 +209,13 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.Aqua;
             this.button5.Location = new System.Drawing.Point(29, 591);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(84, 33);
             this.button5.TabIndex = 17;
             this.button5.Text = "Kembali";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // DataDokter
             // 
