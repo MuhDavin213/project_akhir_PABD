@@ -50,7 +50,7 @@ namespace project_akhir
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new Rawat_Inap().Show();
+            new DataPerawat().Show();
 
         }
 
