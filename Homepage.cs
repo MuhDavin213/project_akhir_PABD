@@ -68,5 +68,10 @@ namespace project_akhir
         {
             new JadwalPraktek().Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new DataKamar().Show();
+        }
     }
 }
