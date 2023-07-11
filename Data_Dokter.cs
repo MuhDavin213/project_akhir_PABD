@@ -74,7 +74,7 @@ namespace project_akhir
 
             if (iddokter == "")
             {
-                MessageBox.Show("Masukkan Semuannya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Masukkan id dokter", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -102,7 +102,13 @@ namespace project_akhir
             textBox1.Text = "";
             textBox1.Enabled = true;
             textBox2.Text = "";
+            textBox2.Enabled = true;
+            textBox3.Text = "";
             textBox3.Enabled = true;
+            textBox4.Text = "";
+            textBox4.Enabled = true;
+            textBox5.Text = "";
+            textBox5.Enabled = true;
             comboBox1.Enabled = false;
             comboBox1.SelectedIndex = -1;
             button6.Enabled = false;

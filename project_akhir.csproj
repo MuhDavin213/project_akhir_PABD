@@ -110,6 +110,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PuskesmasDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PuskesmasDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PuskesmasDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PuskesmasDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PuskesmasDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Puskesmas_superDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -213,6 +223,28 @@
     </None>
     <None Include="PuskesmasDataSet1.xss">
       <DependentUpon>PuskesmasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PuskesmasDataSet2.xsc">
+      <DependentUpon>PuskesmasDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PuskesmasDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PuskesmasDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PuskesmasDataSet2.xss">
+      <DependentUpon>PuskesmasDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PuskesmasDataSet3.xsc">
+      <DependentUpon>PuskesmasDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PuskesmasDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PuskesmasDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PuskesmasDataSet3.xss">
+      <DependentUpon>PuskesmasDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Puskesmas_superDataSet11.xsc">
       <DependentUpon>Puskesmas_superDataSet11.xsd</DependentUpon>

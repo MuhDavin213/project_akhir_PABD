@@ -54,9 +54,14 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.jadwal_praktekTableAdapter = new project_akhir.PuskesmasDataSetTableAdapters.jadwal_praktekTableAdapter();
             this.button6 = new System.Windows.Forms.Button();
+            this.puskesmasDataSet3 = new project_akhir.PuskesmasDataSet3();
+            this.jadwalpraktekBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.jadwal_praktekTableAdapter1 = new project_akhir.PuskesmasDataSet3TableAdapters.jadwal_praktekTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jadwalpraktekBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jadwalpraktekBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -69,7 +74,7 @@
             this.jammulaiDataGridViewTextBoxColumn,
             this.jamselesaiDataGridViewTextBoxColumn,
             this.iddokterDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.jadwalpraktekBindingSource;
+            this.dataGridView1.DataSource = this.jadwalpraktekBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(562, 61);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
@@ -145,6 +150,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -154,6 +160,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -227,6 +234,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jadwalpraktekBindingSource1, "id_jadwal", true));
             this.textBox1.Location = new System.Drawing.Point(202, 91);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(285, 26);
@@ -235,6 +243,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jadwalpraktekBindingSource1, "hari", true));
             this.textBox2.Location = new System.Drawing.Point(202, 150);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(285, 26);
@@ -242,6 +251,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jadwalpraktekBindingSource1, "jam_mulai", true));
             this.textBox3.Location = new System.Drawing.Point(202, 219);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(285, 26);
@@ -249,6 +259,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jadwalpraktekBindingSource1, "jam_selesai", true));
             this.textBox4.Location = new System.Drawing.Point(202, 281);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(285, 26);
@@ -256,6 +267,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jadwalpraktekBindingSource1, "id_dokter", true));
             this.textBox5.Location = new System.Drawing.Point(202, 340);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(285, 26);
@@ -274,6 +286,20 @@
             this.button6.Text = "Simpan";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // puskesmasDataSet3
+            // 
+            this.puskesmasDataSet3.DataSetName = "PuskesmasDataSet3";
+            this.puskesmasDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jadwalpraktekBindingSource1
+            // 
+            this.jadwalpraktekBindingSource1.DataMember = "jadwal_praktek";
+            this.jadwalpraktekBindingSource1.DataSource = this.puskesmasDataSet3;
+            // 
+            // jadwal_praktekTableAdapter1
+            // 
+            this.jadwal_praktekTableAdapter1.ClearBeforeFill = true;
             // 
             // JadwalPraktek
             // 
@@ -305,6 +331,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jadwalpraktekBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jadwalpraktekBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +365,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jamselesaiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddokterDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button6;
+        private PuskesmasDataSet3 puskesmasDataSet3;
+        private System.Windows.Forms.BindingSource jadwalpraktekBindingSource1;
+        private PuskesmasDataSet3TableAdapters.jadwal_praktekTableAdapter jadwal_praktekTableAdapter1;
     }
 }
