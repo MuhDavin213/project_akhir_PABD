@@ -64,11 +64,11 @@
     <Compile Include="Data_Dokter.Designer.cs">
       <DependentUpon>Data_Dokter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Piket_Harian_Dokter.cs">
+    <Compile Include="Rawat_Inap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Piket_Harian_Dokter.Designer.cs">
-      <DependentUpon>Piket_Harian_Dokter.cs</DependentUpon>
+    <Compile Include="Rawat_Inap.Designer.cs">
+      <DependentUpon>Rawat_Inap.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,8 +81,8 @@
     <EmbeddedResource Include="Data_Dokter.resx">
       <DependentUpon>Data_Dokter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Piket_Harian_Dokter.resx">
-      <DependentUpon>Piket_Harian_Dokter.cs</DependentUpon>
+    <EmbeddedResource Include="Rawat_Inap.resx">
+      <DependentUpon>Rawat_Inap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
