@@ -71,7 +71,7 @@ namespace project_akhir
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new DataKamar().Show();
+            new PengurusKamar().Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
