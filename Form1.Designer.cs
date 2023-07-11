@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -44,13 +45,31 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.puskesmasDataSet = new project_akhir.PuskesmasDataSet();
+            this.jadwalpraktekBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jadwal_praktekTableAdapter = new project_akhir.PuskesmasDataSetTableAdapters.jadwal_praktekTableAdapter();
+            this.idjadwalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hariDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jammulaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jamselesaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iddokterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jadwalpraktekBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(562, 69);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idjadwalDataGridViewTextBoxColumn,
+            this.hariDataGridViewTextBoxColumn,
+            this.jammulaiDataGridViewTextBoxColumn,
+            this.jamselesaiDataGridViewTextBoxColumn,
+            this.iddokterDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.jadwalpraktekBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(562, 61);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -116,17 +135,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 151);
+            this.label2.Location = new System.Drawing.Point(29, 339);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Id Dokter";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 220);
+            this.label3.Location = new System.Drawing.Point(29, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 25);
             this.label3.TabIndex = 8;
@@ -136,7 +156,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 280);
+            this.label4.Location = new System.Drawing.Point(22, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 25);
             this.label4.TabIndex = 9;
@@ -146,7 +166,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(29, 341);
+            this.label5.Location = new System.Drawing.Point(29, 282);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 25);
             this.label5.TabIndex = 10;
@@ -187,6 +207,60 @@
             this.textBox5.Size = new System.Drawing.Size(285, 26);
             this.textBox5.TabIndex = 15;
             // 
+            // puskesmasDataSet
+            // 
+            this.puskesmasDataSet.DataSetName = "PuskesmasDataSet";
+            this.puskesmasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jadwalpraktekBindingSource
+            // 
+            this.jadwalpraktekBindingSource.DataMember = "jadwal_praktek";
+            this.jadwalpraktekBindingSource.DataSource = this.puskesmasDataSet;
+            // 
+            // jadwal_praktekTableAdapter
+            // 
+            this.jadwal_praktekTableAdapter.ClearBeforeFill = true;
+            // 
+            // idjadwalDataGridViewTextBoxColumn
+            // 
+            this.idjadwalDataGridViewTextBoxColumn.DataPropertyName = "id_jadwal";
+            this.idjadwalDataGridViewTextBoxColumn.HeaderText = "id_jadwal";
+            this.idjadwalDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idjadwalDataGridViewTextBoxColumn.Name = "idjadwalDataGridViewTextBoxColumn";
+            this.idjadwalDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // hariDataGridViewTextBoxColumn
+            // 
+            this.hariDataGridViewTextBoxColumn.DataPropertyName = "hari";
+            this.hariDataGridViewTextBoxColumn.HeaderText = "hari";
+            this.hariDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.hariDataGridViewTextBoxColumn.Name = "hariDataGridViewTextBoxColumn";
+            this.hariDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // jammulaiDataGridViewTextBoxColumn
+            // 
+            this.jammulaiDataGridViewTextBoxColumn.DataPropertyName = "jam_mulai";
+            this.jammulaiDataGridViewTextBoxColumn.HeaderText = "jam_mulai";
+            this.jammulaiDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.jammulaiDataGridViewTextBoxColumn.Name = "jammulaiDataGridViewTextBoxColumn";
+            this.jammulaiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // jamselesaiDataGridViewTextBoxColumn
+            // 
+            this.jamselesaiDataGridViewTextBoxColumn.DataPropertyName = "jam_selesai";
+            this.jamselesaiDataGridViewTextBoxColumn.HeaderText = "jam_selesai";
+            this.jamselesaiDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.jamselesaiDataGridViewTextBoxColumn.Name = "jamselesaiDataGridViewTextBoxColumn";
+            this.jamselesaiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // iddokterDataGridViewTextBoxColumn
+            // 
+            this.iddokterDataGridViewTextBoxColumn.DataPropertyName = "id_dokter";
+            this.iddokterDataGridViewTextBoxColumn.HeaderText = "id_dokter";
+            this.iddokterDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.iddokterDataGridViewTextBoxColumn.Name = "iddokterDataGridViewTextBoxColumn";
+            this.iddokterDataGridViewTextBoxColumn.Width = 150;
+            // 
             // JadwalPraktek
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -214,6 +288,8 @@
             this.Text = "Jadwal Praktek";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puskesmasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jadwalpraktekBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +313,13 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
+        private PuskesmasDataSet puskesmasDataSet;
+        private System.Windows.Forms.BindingSource jadwalpraktekBindingSource;
+        private PuskesmasDataSetTableAdapters.jadwal_praktekTableAdapter jadwal_praktekTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idjadwalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hariDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jammulaiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jamselesaiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iddokterDataGridViewTextBoxColumn;
     }
 }
