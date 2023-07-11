@@ -58,11 +58,11 @@
     <Compile Include="Data_Pasien.Designer.cs">
       <DependentUpon>Data_Pasien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data_Dokter1.cs">
+    <Compile Include="Data_Dokter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data_Dokter1.Designer.cs">
-      <DependentUpon>Data_Dokter1.cs</DependentUpon>
+    <Compile Include="Data_Dokter.Designer.cs">
+      <DependentUpon>Data_Dokter.cs</DependentUpon>
     </Compile>
     <Compile Include="Piket_Harian_Dokter.cs">
       <SubType>Form</SubType>
@@ -78,8 +78,8 @@
     <EmbeddedResource Include="Data_Pasien.resx">
       <DependentUpon>Data_Pasien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data_Dokter1.resx">
-      <DependentUpon>Data_Dokter1.cs</DependentUpon>
+    <EmbeddedResource Include="Data_Dokter.resx">
+      <DependentUpon>Data_Dokter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Piket_Harian_Dokter.resx">
       <DependentUpon>Piket_Harian_Dokter.cs</DependentUpon>
