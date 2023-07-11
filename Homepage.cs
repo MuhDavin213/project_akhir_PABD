@@ -44,11 +44,7 @@ namespace project_akhir
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            pnlDataDokter.Height = PnlbuttonDataDokter.Height;
-            pnlDataDokter.Top = PnlbuttonDataDokter.Top;
-            pnlDataDokter.Visible = true;
-            PnlDataPasien.Visible = false;
-            PnlRawatInap.Visible = false;
+            new DataDokter().Show();
             
         }
 
