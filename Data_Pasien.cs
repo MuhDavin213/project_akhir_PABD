@@ -21,5 +21,10 @@ namespace project_akhir
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
