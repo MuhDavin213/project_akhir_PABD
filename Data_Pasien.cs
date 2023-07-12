@@ -73,23 +73,23 @@ namespace project_akhir
         private void button6_Click(object sender, EventArgs e)
         {
             string idPAS = textBox1.Text;
-            string namaPAS = textBox2.Text;
+            string namaPAS = textBox4.Text;
             string alamat = textBox3.Text;
-            string notlp = textBox4.Text;
+            string notlp = textBox2.Text;
             string jk = comboBox1.Text;
 
             if (idPAS == "")
             {
-                MessageBox.Show("Masukkan id dokter", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Masukkan id pasien", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.pasien (id_pasien nama_pasien,alamat, no_tlp, jenis_kelamin) VALUES (@id_pasien, @nama_pasien,@alamat, @no_tlp, @jenis_kelamin)";
+                string str = "insert into dbo.pasien (id_pasien,nama_pasien,alamat, no_tlp, jenis_kelamin) VALUES (@id_pasien, @nama_pasien,@alamat, @no_tlp, @jenis_kelamin)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("@id_dokter", idPAS));
-                cmd.Parameters.Add(new SqlParameter("@nama_dokter", namaPAS));
+                cmd.Parameters.Add(new SqlParameter("@id_pasien", idPAS));
+                cmd.Parameters.Add(new SqlParameter("@nama_pasien", namaPAS));
                 cmd.Parameters.Add(new SqlParameter("@alamat", alamat));
                 cmd.Parameters.Add(new SqlParameter("@no_tlp", notlp));
                 cmd.Parameters.Add(new SqlParameter("@jenis_kelamin", jk));
@@ -155,9 +155,9 @@ namespace project_akhir
 
             string id = dataGridView1.SelectedRows[0].Cells["id_perawat"].Value.ToString();
             string idpas = textBox1.Text;
-            string Namapas = textBox2.Text;
+            string Namapas = textBox4.Text;
             string Alamat = textBox3.Text;
-            string tlp = textBox4.Text;
+            string tlp = textBox2.Text;
             string jkl = comboBox1.Text;
 
             if (id == "")
