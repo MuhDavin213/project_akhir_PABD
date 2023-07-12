@@ -164,5 +164,37 @@ namespace project_akhir
             dataGridView1.DataSource = dt;
             koneksi.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DeleteData();
+        }
+        private void DeleteData()
+        {
+            string IdJadwal = textBox1.Text;
+
+            if (IdJadwal == "")
+            {
+                MessageBox.Show("Masukkan ID Dokter yang ingin dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Apakah yakin akan dihapus?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.Jadwal_Perawat_Pasien WHERE Jadwal_Perawat_Pasien = @Jadwal_Perawat_Pasien";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new SqlParameter("@id_dokter", IdJadwal));
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Berhasil Dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    koneksi.Close();
+                    dataGridView1_CellContentClick();
+                    refreshform();
+                }
+            }
+        }
     }
 }
