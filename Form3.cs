@@ -158,7 +158,17 @@ namespace project_akhir
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+          
+        }
+        private void dataGridView1_CellContentClick()
+        {
+            koneksi.Open();
+            string str = "select * From dbo.kamar";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
         }
     }
 }
