@@ -196,5 +196,10 @@ namespace project_akhir
                 }
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GetDataFromDatabase();
+        }
     }
 }
