@@ -17,6 +17,8 @@ namespace project_akhir
     {
         private string stringConnection = "data source=DKRZ\\MUHDAVIN;" + "database=Puskesmas_super;user ID=sa;Password=123";
         private SqlConnection koneksi;
+        private SqlDbType idPiket;
+
         public PiketDokter()
         {
             InitializeComponent();
@@ -148,6 +150,43 @@ namespace project_akhir
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             koneksi.Close();
+        }
+        private void DeleteData()
+        {
+            string IdPiket = textBox1.Text;
+
+            if (IdPiket == "")
+            {
+                MessageBox.Show("Masukkan ID Piket yang ingin dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Apakah yakin akan dihapus?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.piket_harian_doktor WHERE id_piket_harian_doktor = @id_piket_harian_doktor";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new SqlParameter("@id_piket_harian_doktor", idPiket));
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Berhasil Dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    koneksi.Close();
+                    dataGridView1_CellContentClick();
+                    refreshform();
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DeleteData();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GetDataFromDatabase();
         }
     }
 }
