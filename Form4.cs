@@ -129,7 +129,7 @@ namespace project_akhir
             textBox4.Enabled = true;
             textBox5.Text = "";
             textBox5.Enabled = true;
-            button1.Enabled = true;
+            button2.Enabled = true;
         }
         private void dataGridView1_CellContentClick()
         {
