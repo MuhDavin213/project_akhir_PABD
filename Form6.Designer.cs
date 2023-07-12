@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -48,7 +49,18 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.puskesmas_superDataSet7 = new project_akhir.Puskesmas_superDataSet7();
+            this.jadwalPerawatPasienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jadwal_Perawat_PasienTableAdapter = new project_akhir.Puskesmas_superDataSet7TableAdapters.Jadwal_Perawat_PasienTableAdapter();
+            this.idjadwalperawatpasienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hariDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jammulaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jamselesaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idperawatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idpasienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puskesmas_superDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jadwalPerawatPasienBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox4
@@ -179,7 +191,16 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idjadwalperawatpasienDataGridViewTextBoxColumn,
+            this.hariDataGridViewTextBoxColumn,
+            this.jammulaiDataGridViewTextBoxColumn,
+            this.jamselesaiDataGridViewTextBoxColumn,
+            this.idperawatDataGridViewTextBoxColumn,
+            this.idpasienDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.jadwalPerawatPasienBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(457, 49);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
@@ -239,6 +260,68 @@
             this.button5.Text = "Kembali";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // puskesmas_superDataSet7
+            // 
+            this.puskesmas_superDataSet7.DataSetName = "Puskesmas_superDataSet7";
+            this.puskesmas_superDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jadwalPerawatPasienBindingSource
+            // 
+            this.jadwalPerawatPasienBindingSource.DataMember = "Jadwal_Perawat_Pasien";
+            this.jadwalPerawatPasienBindingSource.DataSource = this.puskesmas_superDataSet7;
+            // 
+            // jadwal_Perawat_PasienTableAdapter
+            // 
+            this.jadwal_Perawat_PasienTableAdapter.ClearBeforeFill = true;
+            // 
+            // idjadwalperawatpasienDataGridViewTextBoxColumn
+            // 
+            this.idjadwalperawatpasienDataGridViewTextBoxColumn.DataPropertyName = "id_jadwal_perawat_pasien";
+            this.idjadwalperawatpasienDataGridViewTextBoxColumn.HeaderText = "id_jadwal_perawat_pasien";
+            this.idjadwalperawatpasienDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idjadwalperawatpasienDataGridViewTextBoxColumn.Name = "idjadwalperawatpasienDataGridViewTextBoxColumn";
+            this.idjadwalperawatpasienDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // hariDataGridViewTextBoxColumn
+            // 
+            this.hariDataGridViewTextBoxColumn.DataPropertyName = "hari";
+            this.hariDataGridViewTextBoxColumn.HeaderText = "hari";
+            this.hariDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hariDataGridViewTextBoxColumn.Name = "hariDataGridViewTextBoxColumn";
+            this.hariDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // jammulaiDataGridViewTextBoxColumn
+            // 
+            this.jammulaiDataGridViewTextBoxColumn.DataPropertyName = "jam_mulai";
+            this.jammulaiDataGridViewTextBoxColumn.HeaderText = "jam_mulai";
+            this.jammulaiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.jammulaiDataGridViewTextBoxColumn.Name = "jammulaiDataGridViewTextBoxColumn";
+            this.jammulaiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // jamselesaiDataGridViewTextBoxColumn
+            // 
+            this.jamselesaiDataGridViewTextBoxColumn.DataPropertyName = "jam_selesai";
+            this.jamselesaiDataGridViewTextBoxColumn.HeaderText = "jam_selesai";
+            this.jamselesaiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.jamselesaiDataGridViewTextBoxColumn.Name = "jamselesaiDataGridViewTextBoxColumn";
+            this.jamselesaiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idperawatDataGridViewTextBoxColumn
+            // 
+            this.idperawatDataGridViewTextBoxColumn.DataPropertyName = "id_perawat";
+            this.idperawatDataGridViewTextBoxColumn.HeaderText = "id_perawat";
+            this.idperawatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idperawatDataGridViewTextBoxColumn.Name = "idperawatDataGridViewTextBoxColumn";
+            this.idperawatDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idpasienDataGridViewTextBoxColumn
+            // 
+            this.idpasienDataGridViewTextBoxColumn.DataPropertyName = "id_pasien";
+            this.idpasienDataGridViewTextBoxColumn.HeaderText = "id_pasien";
+            this.idpasienDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idpasienDataGridViewTextBoxColumn.Name = "idpasienDataGridViewTextBoxColumn";
+            this.idpasienDataGridViewTextBoxColumn.Width = 125;
+            // 
             // PerawatPasien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -269,7 +352,10 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PerawatPasien";
             this.Text = "Jadwal Perawat Pasien";
+            this.Load += new System.EventHandler(this.PerawatPasien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puskesmas_superDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jadwalPerawatPasienBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,5 +383,14 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
+        private Puskesmas_superDataSet7 puskesmas_superDataSet7;
+        private System.Windows.Forms.BindingSource jadwalPerawatPasienBindingSource;
+        private Puskesmas_superDataSet7TableAdapters.Jadwal_Perawat_PasienTableAdapter jadwal_Perawat_PasienTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idjadwalperawatpasienDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hariDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jammulaiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jamselesaiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idperawatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idpasienDataGridViewTextBoxColumn;
     }
 }
