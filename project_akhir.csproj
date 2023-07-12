@@ -150,6 +150,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Puskesmas_superDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Puskesmas_superDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Puskesmas_superDataSet41.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Rawat_Inap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +326,17 @@
     </None>
     <None Include="Puskesmas_superDataSet4.xss">
       <DependentUpon>Puskesmas_superDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Puskesmas_superDataSet41.xsc">
+      <DependentUpon>Puskesmas_superDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="Puskesmas_superDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Puskesmas_superDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Puskesmas_superDataSet41.xss">
+      <DependentUpon>Puskesmas_superDataSet41.xsd</DependentUpon>
     </None>
     <None Include="Resources\pasien.jpg" />
   </ItemGroup>
