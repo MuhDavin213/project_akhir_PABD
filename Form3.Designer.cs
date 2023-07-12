@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idkamarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nokamarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kamarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.puskesmas_superDataSet4 = new project_akhir.Puskesmas_superDataSet4();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -41,15 +46,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.puskesmas_superDataSet4 = new project_akhir.Puskesmas_superDataSet4();
-            this.kamarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kamarTableAdapter = new project_akhir.Puskesmas_superDataSet4TableAdapters.KamarTableAdapter();
-            this.idkamarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nokamarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.puskesmas_superDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kamarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puskesmas_superDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -68,6 +68,41 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(409, 223);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // idkamarDataGridViewTextBoxColumn
+            // 
+            this.idkamarDataGridViewTextBoxColumn.DataPropertyName = "id_kamar";
+            this.idkamarDataGridViewTextBoxColumn.HeaderText = "id_kamar";
+            this.idkamarDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idkamarDataGridViewTextBoxColumn.Name = "idkamarDataGridViewTextBoxColumn";
+            this.idkamarDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nokamarDataGridViewTextBoxColumn
+            // 
+            this.nokamarDataGridViewTextBoxColumn.DataPropertyName = "no_kamar";
+            this.nokamarDataGridViewTextBoxColumn.HeaderText = "no_kamar";
+            this.nokamarDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nokamarDataGridViewTextBoxColumn.Name = "nokamarDataGridViewTextBoxColumn";
+            this.nokamarDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tipeDataGridViewTextBoxColumn
+            // 
+            this.tipeDataGridViewTextBoxColumn.DataPropertyName = "tipe";
+            this.tipeDataGridViewTextBoxColumn.HeaderText = "tipe";
+            this.tipeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tipeDataGridViewTextBoxColumn.Name = "tipeDataGridViewTextBoxColumn";
+            this.tipeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // kamarBindingSource
+            // 
+            this.kamarBindingSource.DataMember = "Kamar";
+            this.kamarBindingSource.DataSource = this.puskesmas_superDataSet4;
+            // 
+            // puskesmas_superDataSet4
+            // 
+            this.puskesmas_superDataSet4.DataSetName = "Puskesmas_superDataSet4";
+            this.puskesmas_superDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button4
             // 
@@ -184,43 +219,9 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "No Kamar";
             // 
-            // puskesmas_superDataSet4
-            // 
-            this.puskesmas_superDataSet4.DataSetName = "Puskesmas_superDataSet4";
-            this.puskesmas_superDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kamarBindingSource
-            // 
-            this.kamarBindingSource.DataMember = "Kamar";
-            this.kamarBindingSource.DataSource = this.puskesmas_superDataSet4;
-            // 
             // kamarTableAdapter
             // 
             this.kamarTableAdapter.ClearBeforeFill = true;
-            // 
-            // idkamarDataGridViewTextBoxColumn
-            // 
-            this.idkamarDataGridViewTextBoxColumn.DataPropertyName = "id_kamar";
-            this.idkamarDataGridViewTextBoxColumn.HeaderText = "id_kamar";
-            this.idkamarDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idkamarDataGridViewTextBoxColumn.Name = "idkamarDataGridViewTextBoxColumn";
-            this.idkamarDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nokamarDataGridViewTextBoxColumn
-            // 
-            this.nokamarDataGridViewTextBoxColumn.DataPropertyName = "no_kamar";
-            this.nokamarDataGridViewTextBoxColumn.HeaderText = "no_kamar";
-            this.nokamarDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nokamarDataGridViewTextBoxColumn.Name = "nokamarDataGridViewTextBoxColumn";
-            this.nokamarDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tipeDataGridViewTextBoxColumn
-            // 
-            this.tipeDataGridViewTextBoxColumn.DataPropertyName = "tipe";
-            this.tipeDataGridViewTextBoxColumn.HeaderText = "tipe";
-            this.tipeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tipeDataGridViewTextBoxColumn.Name = "tipeDataGridViewTextBoxColumn";
-            this.tipeDataGridViewTextBoxColumn.Width = 125;
             // 
             // DataKamar
             // 
@@ -246,8 +247,8 @@
             this.Text = "Data Kamar";
             this.Load += new System.EventHandler(this.DataKamar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.puskesmas_superDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kamarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puskesmas_superDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

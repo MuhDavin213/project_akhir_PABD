@@ -24,12 +24,39 @@ namespace project_akhir
 
         private void button4_Click(object sender, EventArgs e)
         {
+            GetDataFromDatabase();
+        }
+        private void DeleteData()
+        {
+            string Iddokter = textBox1.Text;
 
+            if (Iddokter == "")
+            {
+                MessageBox.Show("Masukkan ID Dokter yang ingin dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Apakah yakin akan dihapus?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.Dokter WHERE id_dokter = @id_dokter";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new SqlParameter("@id_dokter", Iddokter));
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Berhasil Dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    koneksi.Close();
+                    dataGridView1_CellContentClick();
+                    refreshform();
+                }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            DeleteData();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -43,7 +70,7 @@ namespace project_akhir
             string id = dataGridView1.SelectedRows[0].Cells["id_kamar"].Value.ToString();
             string idKamar = textBox1.Text;
             string Nokamar = textBox2.Text;
-            string Tipe = textBox3.Text;
+            string tipe = textBox3.Text;
 
             if (id == "")
             {
@@ -60,7 +87,7 @@ namespace project_akhir
                 MessageBox.Show("Masukan no kamar", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (Tipe == "")
+            if (tipe == "")
             {
                 MessageBox.Show("Masukan Tipe kamar", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -68,9 +95,9 @@ namespace project_akhir
             string sql = "UPDATE Dokter SET id_kamar = @id_kamar, no_kamar = @no_kamar, tipe = @tipe";
             using (SqlCommand command = new SqlCommand(sql, koneksi))
             {
-                command.Parameters.AddWithValue("@id_dokter", idKamar);
-                command.Parameters.AddWithValue("@nama_dokter", Nokamar);
-                command.Parameters.AddWithValue("@spesialis", Tipe);
+                command.Parameters.AddWithValue("@id_kamar", idKamar);
+                command.Parameters.AddWithValue("@no_kamar", Nokamar);
+                command.Parameters.AddWithValue("@tipe", tipe);
                 try
                 {
                     koneksi.Open();
@@ -117,6 +144,21 @@ namespace project_akhir
             textBox3.Text = "";
             textBox3.Enabled = true;
             button1.Enabled = true;
+        }
+        private void GetDataFromDatabase()
+        {
+            koneksi.Open();
+            string str = "SELECT * FROM dbo.Kamar";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            koneksi.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
