@@ -61,25 +61,13 @@ namespace project_akhir
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Pilih Baris yang akan di update", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string id = dataGridView1.SelectedRows[0].Cells["id_kamar"].Value.ToString();
             string idKamar = textBox1.Text;
             string Nokamar = textBox2.Text;
             string tipe = textBox3.Text;
 
-            if (id == "")
-            {
-                MessageBox.Show("id kamar tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             if (idKamar == "")
             {
-                MessageBox.Show("Masukan Id kamar", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("id kamar tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (Nokamar == "")
@@ -131,8 +119,8 @@ namespace project_akhir
 
         private void DataKamar_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'puskesmas_superDataSet4.Kamar' table. You can move, or remove it, as needed.
-            this.kamarTableAdapter.Fill(this.puskesmas_superDataSet4.Kamar);
+            // TODO: This line of code loads data into the 'puskesmasDataSet6.kamar' table. You can move, or remove it, as needed.
+            this.kamarTableAdapter1.Fill(this.puskesmasDataSet6.kamar);
 
         }
         private void refreshform()

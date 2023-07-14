@@ -133,26 +133,15 @@ namespace project_akhir
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Pilih Baris yang akan di update", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
-            string id = dataGridView1.SelectedRows[0].Cells["id_perawat"].Value.ToString();
             string idperawat = textBox1.Text;
             string Nama = textBox2.Text;
             string alamat = textBox3.Text;
             string notlp = textBox4.Text;
 
-            if (id == "")
-            {
-                MessageBox.Show("id perawat tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             if (idperawat == "")
             {
-                MessageBox.Show("Masukan Id perawat", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("id perawat tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (Nama == "")

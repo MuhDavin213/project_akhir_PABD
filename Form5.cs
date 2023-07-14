@@ -14,9 +14,8 @@ namespace project_akhir
 {
     public partial class PengurusKamar : Form
     {
-        private string stringConnection = "data source=DKRZ\\MUHDAVIN;" + "database=Puskesmas_super;user ID=sa;Password=123";
+        private string stringConnection = "data source=LAPTOP-DLDQQ5G0;" + "database=Puskesmas;user ID=sa;Password=mzM160503";
         private SqlConnection koneksi;
-        private SqlDbType idPiket;
         public PengurusKamar()
         {
             InitializeComponent();
@@ -30,8 +29,8 @@ namespace project_akhir
 
         private void PengurusKamar_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'puskesmas_superDataSet6.Jadwal_Pengurus_Kamar' table. You can move, or remove it, as needed.
-            this.jadwal_Pengurus_KamarTableAdapter.Fill(this.puskesmas_superDataSet6.Jadwal_Pengurus_Kamar);
+            // TODO: This line of code loads data into the 'puskesmasDataSet8.jadwal_pengurus_kamar' table. You can move, or remove it, as needed.
+            this.jadwal_pengurus_kamarTableAdapter2.Fill(this.puskesmasDataSet8.jadwal_pengurus_kamar);
 
         }
 
@@ -158,7 +157,7 @@ namespace project_akhir
                 if (dialogResult == DialogResult.Yes)
                 {
                     koneksi.Open();
-                    string str = "DELETE FROM dbo.Jadwal_Pengurus_Kamar WHERE Jadwal_Pengurus_kamar = @id_jadwal_pengurus_kamar";
+                    string str = "DELETE FROM dbo.jadwal_pengurus_kamar WHERE id_jadwal= @id_jadwal";
                     SqlCommand cmd = new SqlCommand(str, koneksi);
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.Add(new SqlParameter("@id_jadwal_pengurus_kamar", idJadwal));
@@ -174,6 +173,42 @@ namespace project_akhir
         private void button4_Click(object sender, EventArgs e)
         {
             GetDataFromDatabase();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string idjadwal = textBox1.Text;
+            string hari = textBox2.Text;
+            string idperawat = textBox3.Text;
+            string idkamar = textBox4.Text;
+
+            if (idperawat == "")
+            {
+                MessageBox.Show("Masukkan id Jadwal Pengurus Kamar", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.jadwal_pengurus_kamar (id_jadwal, hari, id_perawat, id_kamar) VALUES (@id_jadwal, @hari,@id_perawat, @id_kamar)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_jadwal", idperawat));
+                cmd.Parameters.Add(new SqlParameter("@hari", hari));
+                cmd.Parameters.Add(new SqlParameter("@id_perawat", idperawat));
+                cmd.Parameters.Add(new SqlParameter("@id_kamar", idkamar));
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                koneksi.Close();
+                dataGridView1_CellContentClick();
+                refreshform();
+
+            }
         }
     }
 }

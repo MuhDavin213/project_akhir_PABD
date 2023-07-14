@@ -147,27 +147,17 @@ namespace project_akhir
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Pilih Baris yang akan di update", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
-            string id = dataGridView1.SelectedRows[0].Cells["id_perawat"].Value.ToString();
+
             string idpas = textBox1.Text;
             string Namapas = textBox4.Text;
             string Alamat = textBox3.Text;
             string tlp = textBox2.Text;
             string jkl = comboBox1.Text;
 
-            if (id == "")
+            if (idpas== "")
             {
-                MessageBox.Show("id Dokter tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (idpas == "")
-            {
-                MessageBox.Show("Masukan Id pasien", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("id Pasien tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (Namapas == "")

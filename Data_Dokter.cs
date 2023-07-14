@@ -162,13 +162,9 @@ namespace project_akhir
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Pilih Baris yang akan di update", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
-            string id = dataGridView1.SelectedRows[0].Cells["id_dokter"].Value.ToString();
+
+           
             string idDokter = textBox1.Text;
             string Nama = textBox2.Text;
             string spesial = textBox3.Text;
@@ -176,14 +172,9 @@ namespace project_akhir
             string tlp = textBox5.Text;
             string jkl = comboBox1.Text;
 
-            if (id == "")
-            {
-                MessageBox.Show("id Dokter tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             if (idDokter == "")
             {
-                MessageBox.Show("Masukan Id Dokter", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("id Dokter tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (Nama == "")
@@ -212,7 +203,7 @@ namespace project_akhir
                 return;
             }
 
-            string sql = "UPDATE Dokter SET id_dokter = @id_dokter, nama_dokter = @nama_dokter, spesialis = @spesialis , alamat = @alamat, no_tlp = @no_tlp, jenis_kelamin=@jenis_kelamin";
+            string sql = "UPDATE Dokter SET id_dokter = @id_dokter, nama_dokter = @nama_dokter, spesialis = @spesialis , alamat = @alamat, no_tlp = @no_tlp, jenis_kelamin=@jenis_kelamin  WHERE id_dokter = @id_dokter";
             using (SqlCommand command = new SqlCommand(sql, koneksi))
             {
                 command.Parameters.AddWithValue("@id_dokter", idDokter);
