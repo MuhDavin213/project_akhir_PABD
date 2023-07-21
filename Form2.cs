@@ -103,10 +103,10 @@ namespace project_akhir
                 if (dialogResult == DialogResult.Yes)
                 {
                     koneksi.Open();
-                    string str = "DELETE FROM dbo.Perawat WHERE id_dokter = @id_perawat";
+                    string str = "DELETE FROM dbo.Perawat WHERE id_perawat = @id_perawat";
                     SqlCommand cmd = new SqlCommand(str, koneksi);
                     cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.Add(new SqlParameter("@id_dokter", idperawat));
+                    cmd.Parameters.Add(new SqlParameter("@id_perawat", idperawat));
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Data Berhasil Dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     koneksi.Close();
